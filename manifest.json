@@ -1,0 +1,20 @@
+{
+    "name": "weather-App",
+    "description": "Search weather by name of the city",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": {
+        "16": "mist16.png",
+        "48": "mist48.png",
+        "128": "mist128.png"
+      }
+    },
+    "icons": {
+      "16": "mist16.png",
+      "48": "mist48.png",
+      "128": "mist128.png"
+    },
+    "permissions": ["activeTab", "scripting"]
+  }
