@@ -4,20 +4,6 @@
 
 This is a simple weather app built with JavaScript that fetches weather data from the OpenWeatherMap API.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Installation
 
 ### Set up your project files
@@ -25,11 +11,13 @@ Create the necessary files for your Chrome extension project, such as :
 
 manifest.json, background.js, content.js, popup.html, and popup.js.
 
-1. Clone the repository: ``
-2. Navigate to the project directory: `cd chrome-extension`
+1. Clone the repository: `https://github.com/kumardee78/weatherApp.git`
+2. Navigate to the project directory: `cd weatherApp`
 3. Open Google Chrome and navigate to `chrome://extensions/`
 4. Enable "Developer mode" by toggling the switch in the top-right corner.
 5. Click "Load unpacked" and select the project directory.
+   As seen below **Image** heading 
+
 ## Usage
 Once the extension is installed, you can access its functionality by clicking the extension icon in the Chrome toolbar. The extension will perform its intended task, such as modifying web pages, displaying a popup, or providing additional tools.
 
@@ -41,10 +29,13 @@ This app uses the OpenWeatherMap API to fetch weather data. The API endpoint use
 `https://api.openweathermap.org/data/2.5/weather`
 
 You'll need to obtain an API key from OpenWeatherMap to use this API.
+
+
 ## Tech Stack
 * HTML 
 * CSS 
 * and JAVASCRIPT
+
 ##Images
 
 ![1](https://github.com/kumardee78/weatherApp/assets/159279737/a594151b-5ed6-45e3-b9f8-b736366916f1)
@@ -77,6 +68,8 @@ We appreciate the feedback and support received from our peers, mentors, and the
 
 Conclusion
 This project would not have been possible without the dedication, collaboration, and continuous support of everyone involved. We look forward to future endeavors and the opportunity to contribute to more impactful and inspiring projects.
+
+
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request.
