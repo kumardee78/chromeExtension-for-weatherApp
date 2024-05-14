@@ -36,7 +36,7 @@ You'll need to obtain an API key from OpenWeatherMap to use this API.
 * CSS 
 * and JAVASCRIPT
 
-##Images
+## Images
 
 ![1](https://github.com/kumardee78/weatherApp/assets/159279737/a594151b-5ed6-45e3-b9f8-b736366916f1)
 
