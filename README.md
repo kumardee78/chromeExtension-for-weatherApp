@@ -44,7 +44,22 @@ You'll need to obtain an API key from OpenWeatherMap to use this API.
 ## Tech Stack
 * HTML 
 * CSS 
-* and JAVASCRIPT 
+* and JAVASCRIPT
+##Images
+
+![1](https://github.com/kumardee78/weatherApp/assets/159279737/a594151b-5ed6-45e3-b9f8-b736366916f1)
+
+![2](https://github.com/kumardee78/weatherApp/assets/159279737/c22a4a79-a804-4aae-8bbf-6c0303d37bea)
+
+![3](https://github.com/kumardee78/weatherApp/assets/159279737/8ff31bd8-a23b-48b8-82ba-da5e2b7976f6)
+
+![4](https://github.com/kumardee78/weatherApp/assets/159279737/de5cc7be-b43e-4a1f-8cfd-8e02b6a65412)
+
+![5](https://github.com/kumardee78/weatherApp/assets/159279737/551e751b-8dac-450a-b775-102ab6af10d5)
+
+![6](https://github.com/kumardee78/weatherApp/assets/159279737/e84ccfcf-6e08-4b6c-b616-6a456328edcf)
+
+
 ## Acknowledgement
 I would like to express my gratitude to everyone who contributed to the development of the "Commitments" sections of this L'Oréal website project.
 
