@@ -52,7 +52,7 @@ You'll need to obtain an API key from OpenWeatherMap to use this API.
 
 
 ## Acknowledgement
-I would like to express my gratitude to everyone who contributed to the development of the "Commitments" sections of this L'Oréal website project.
+I would like to express my gratitude to everyone who contributed to the development of the Chrome Extension of WeatherApp project.
 
 ### Project Contirbutors:
 "Deepak kumar"
