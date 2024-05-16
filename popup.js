@@ -1,38 +1,42 @@
 const searchBtn = document.querySelector("#searchbtn")
 const weatherDetail = document.querySelector(".weatherDetail")
+const city = document.querySelector("#cityInput").value
+
+const apiKey = "f260d8dd75ad55bc6f3013a0b4d0d5ed";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
 searchBtn.addEventListener("click", getWeather)
+
 async function getWeather(){
-    const city = document.getElementById('cityInput').value;
-    console.log(city)
-    
-    const url = `https://weather-api138.p.rapidapi.com/weather?city_name=${city}&units=metric`;
-    const options = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': '9e4505caadmshd0ccc38f8669f77p14772ejsnf3618d5eb0ba',
-        'X-RapidAPI-Host': 'weather-api138.p.rapidapi.com'
-    }};
-    const response = await fetch(url, options);
-    if(city == ""){
+    const city = document.querySelector("#cityInput").value
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`)
+    console.log(response)
+    if (response.status == 404) {
+        // If city name is not entered
         document.querySelector(".error").style.display = "block";
         weatherDetail.style.display = "none";
-    }else{
+    }
+    else{
         const result = await response.json();
-        console.log(result);
+        console.log(result)
         showWeatherData(result);
     }
-}  
+} 
+
 function showWeatherData(result){
     weatherDetail.innerHTML = "";
 
     const image = document.createElement("img")
     image.classList.add("weather-icon")
+    
+    const descript = document.createElement("p")
+    descript.classList.add("desc")
+    descript.innerHTML = result.weather[0].description;
 
-    const temperature = document.createElement("h1")
-    temperature.classList.add("temp")
+    const temperature = document.createElement("h2")
+    temperature.classList.add("temp") 
 
-    const cityName = document.createElement("h2")
+    const cityName = document.createElement("h1")
     cityName.classList.add("city-name")
     cityName.innerHTML = result.name
 
@@ -73,13 +77,13 @@ function showWeatherData(result){
     rightSide.append(windImage, windDetailDiv)
 
     lowerDiv.append(leftSide, rightSide)
-    weatherDetail.append(image, temperature, cityName, lowerDiv);
-
-
-    temperature.innerHTML = result.main.temp + " °C"
+    weatherDetail.append(image,descript, temperature, cityName, lowerDiv);
+    
+    temperature.innerHTML = Math.round(result.main.temp) + " °C"
     humidparaOne.innerHTML = result.main.humidity + " %"
     windparaOne.innerHTML = result.wind.speed + " km/h"
 
+    
     if(result.weather[0].main == "Clouds"){
         image.src = "weather-app-img/images/clouds.png"
     }
@@ -95,13 +99,19 @@ function showWeatherData(result){
     else if(result.weather[0].main == "Mist"){
         image.src = "weather-app-img/images/mist.png"
     }
+    else if(result.weather[0].main == 'Snow'){
+        image.src = "weather-app-img/images/snow.png";
+    }
+    else if(result.weather[0].main == "Smoke"){
+        image.src = "weather-app-img/images/smoke.png"
+    }
     else if(result.weather[0].main == "Haze"){
         image.src = "https://www.accuweather.com/images/whiteweathericons/1.svg"
         image.style.width = "5.8rem"
         image.style.height = "5.8rem"
         image.style.paddingBottom = "0.5rem"
+        image.style.paddingTop = "1rem"
     }
-    document.getElementById('cityInput').value = ""
     weatherDetail.style.display = "block"
     document.querySelector(".error").style.display = "none";
 }
